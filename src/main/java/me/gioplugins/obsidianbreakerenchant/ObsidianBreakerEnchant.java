@@ -1,6 +1,10 @@
 package me.gioplugins.obsidianbreakerenchant;
 
+import me.gioplugins.obsidianbreakerenchant.comands.ObbyBook;
 import me.gioplugins.obsidianbreakerenchant.enchant.ObsidianBreaker;
+import me.gioplugins.obsidianbreakerenchant.events.InventoryClick;
+import me.gioplugins.obsidianbreakerenchant.events.PlayerInteract;
+import org.bukkit.Bukkit;
 import org.bukkit.enchantments.Enchantment;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -18,6 +22,11 @@ public final class ObsidianBreakerEnchant extends JavaPlugin {
         obsidianBreaker = new ObsidianBreaker(69);
         registerEnchantment(obsidianBreaker);
         enchantments.add(obsidianBreaker);
+
+        getCommand("obbybook").setExecutor(new ObbyBook());
+
+        Bukkit.getServer().getPluginManager().registerEvents(new InventoryClick(), this);
+        Bukkit.getServer().getPluginManager().registerEvents(new PlayerInteract(), this);
     }
 
     @Override

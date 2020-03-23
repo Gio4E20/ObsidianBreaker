@@ -4,3 +4,7 @@ main: me.gioplugins.obsidianbreakerenchant.ObsidianBreakerEnchant
 authors: [Gio]
 description: adds Obsidian Breaker to minecraft
 website: https://github.com/Gio4E20
+commands:
+  obbybook:
+    -description: give obby book
+    -usage: /command
