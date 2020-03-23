@@ -1,0 +1,6 @@
+name: ObsidianBreakerEnchant
+version: ${project.version}
+main: me.gioplugins.obsidianbreakerenchant.ObsidianBreakerEnchant
+authors: [Gio]
+description: adds Obsidian Breaker to minecraft
+website: https://github.com/Gio4E20
